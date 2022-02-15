@@ -72,7 +72,7 @@ const disableSubmit = status => {
 const finishUpload = (element, endpoint, bucket, objectKey) => {
   const link = element.querySelector('.file-link');
   const url = element.querySelector('.file-url');
-  url.value = endpoint + '/' + bucket + '/' + objectKey;
+  url.value = endpoint + '/' + objectKey;
   link.setAttribute('href', url.value);
   link.innerHTML = parseNameFromUrl(url.value)
     .split('/')
