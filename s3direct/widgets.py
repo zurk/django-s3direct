@@ -12,7 +12,7 @@ from django.conf import settings
 
 class S3DirectWidget(widgets.TextInput):
     class Media:
-        js = ('s3direct/dist/index.js', )
+        js = ('s3direct/dist/index.js', 's3direct/dist/evaporate.js')
         css = {'all': ('s3direct/dist/index.css', )}
 
     def __init__(self, *args, **kwargs):

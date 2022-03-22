@@ -394,7 +394,7 @@ class SignatureViewTestCase(TestCase):
     def create_dummy_signing_request(self, region=None):
         signing_date = self.EXAMPLE_SIGNING_DATE
         canonical_request = (
-            '{request_method}\n/{bucket}/{object_key}\nhost={host}\nx-amz-'
+            '{request_method}\n/{object_key}\nhost={host}\nx-amz-'
             'date:{request_datetime}\n\nhost;x-amz-date\n{hashed_payload}'
         ).format(
             request_method='GET',

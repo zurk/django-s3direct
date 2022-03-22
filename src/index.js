@@ -1,7 +1,8 @@
 import Cookies from 'js-cookie';
 import createHash from 'sha.js';
-import Evaporate from 'evaporate';
 import SparkMD5 from 'spark-md5';
+
+import Evaporate from './evaporate.js';
 
 import './css/bootstrap-progress.css';
 import './css/styles.css';
@@ -206,7 +207,7 @@ const initiateUpload = (element, signingUrl, uploadParameters, file, dest) => {
 
     const cancelUpload = e => {
       e.preventDefault();
-      evaporate.cancel(`${uploadParameters.bucket}/${addConfig.name}`);
+      evaporate.cancel(`${addConfig.name}`);
     };
 
     cancelButton.addEventListener('click', cancelUpload, false);
